@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body style="background-color:rgb(255,15,45);">
+
+    <h1 style ="text-align: center;">Mon super site de gossip, depuis le dossier views !</h1>
+    <p style ="text-align: center;">Bonjour ! Bienvenue dans notre site  </p>
+    <% i = 0%>
+    <% gossips.each do|gossip| %>
+        <p> 
+    	<a href="/gossips/<%= i%>"><%= gossip.author %> </a>  <br/> 
+    	<%= gossip.content %><% i += 1%>
+        </p>
+      <% end %>
+    <a href="/gossips/new/"> Entrer </a>
+  
+  </body>
+</html>
